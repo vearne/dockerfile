@@ -4,8 +4,6 @@ IMAGE_NAME = woshiaotian/nginx:${VERSION}
 
 .PHONY: image
 image:
-	docker build -f Dockerfile --rm -t $(IMAGE_NAME) .
+	docker buildx build --platform linux/amd64,linux/arm64 --push -t ${IMAGE_NAME} .
 
-.PHONY: push
-push: image
-	docker push $(IMAGE_NAME)
+
