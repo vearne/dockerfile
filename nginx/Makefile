@@ -1,4 +1,4 @@
-VERSION := v1.12.2
+VERSION := v1.12
 
 IMAGE_NAME = woshiaotian/nginx:${VERSION}
 
