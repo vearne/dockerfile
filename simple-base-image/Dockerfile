@@ -27,7 +27,7 @@ RUN apt install -y --no-install-recommends \
     redis strace supervisor zip vim netcat-traditional \
     dnsutils net-tools inetutils-ping inetutils-traceroute
 
-RUN apt install -y procps iproute2 tcpdump
+RUN apt install -y procps iproute2 tcpdump ca-certificates
 
 CMD ["supervisord", "--nodaemon", "--configuration", "/etc/supervisor/supervisord.conf"]
 
