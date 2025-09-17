@@ -13,7 +13,7 @@ RUN ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     dpkg-reconfigure --frontend noninteractive tzdata
 
 # 设置默认语言为英语（美国）以及UTF-8字符编码
-ENV LANG en_US.UTF-8
+ENV LANG=en_US.UTF-8
 
 # 安装语言环境包和设置默认语言
 RUN apt-get install -y locales && \
