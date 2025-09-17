@@ -1,4 +1,4 @@
-FROM debian:11
+FROM debian:12
 
 
 VOLUME ["/data"]
@@ -27,7 +27,7 @@ RUN apt install -y --no-install-recommends \
     redis strace supervisor zip vim netcat-traditional \
     dnsutils net-tools inetutils-ping inetutils-traceroute
 
-RUN apt install -y procps iproute2 tcpdump ca-certificates
+RUN apt install -y procps iproute2 tcpdump ca-certificates openssh-client
 
 CMD ["supervisord", "--nodaemon", "--configuration", "/etc/supervisor/supervisord.conf"]
 

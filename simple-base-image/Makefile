@@ -1,4 +1,4 @@
-VERSION := v0.1.8
+VERSION := v0.2.0
 COMMAND_NAME = simple-base-image
 
 IMAGE_NAME = woshiaotian/${COMMAND_NAME}:${VERSION}
